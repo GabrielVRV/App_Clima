@@ -1,0 +1,107 @@
+/* Importando uma fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Estilos Gerais (Reset) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #8BC6EC, #9599E2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container Principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #2b3a4a;
+}
+
+/* Área de Busca */
+.search-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#city-input {
+    flex-grow: 1; /* Faz o input ocupar o máximo de espaço possível */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none; /* Remove a borda azul ao clicar */
+    transition: border-color 0.3s;
+}
+
+#city-input:focus {
+    border-color: #8BC6EC;
+}
+
+#search-btn {
+    padding: 0.75rem 1rem;
+    background-color: #8BC6EC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #9599E2;
+}
+
+/* Área de Resultados */
+#weather-data h2 {
+    margin-bottom: 1rem;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize; /* Deixa a primeira letra maiúscula */
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Mensagem de erro */
+#error-message p {
+    color: #a04444;
+    font-weight: 500;
+}
+
+/* Classe Utilitária para esconder elementos */
+.hide {
+    display: none;
+}
