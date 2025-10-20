@@ -3,35 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima Interativo</title>
+    <title>Clima Interativo PRO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main class="container">
-        <h1>Clima Interativo</h1>
 
-        <div class="search-container">
-            <input type="text" id="city-input" placeholder="Digite o nome de uma cidade...">
-            <button id="search-btn">Buscar</button>
-        </div>
-
-        <div id="weather-data" class="hide">
-            <h2 id="city-name"></h2>
-            <p id="temperature"></p>
-            <div id="description-container">
-                <p id="description"></p>
-                <img id="weather-icon" src="" alt="Condição do tempo">
+        <header class="search-header">
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Digite o nome de uma cidade...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <p id="humidity"></p>
-            <p id="wind"></p>
-        </div>
-        
+            <div id="history-container">
+                </div>
+        </header>
+
         <div id="error-message" class="hide">
-            <p>Não foi possível encontrar o clima para a cidade informada.</p>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>Não foi possível encontrar o clima. Verifique o nome da cidade.</p>
         </div>
 
-    </main>
+        <div id="weather-container" class="hide">
+
+            <section class="current-weather">
+                <div class="current-header">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2 id="city-name"></h2>
+                </div>
+                
+                <div class="current-main">
+                    <img id="weather-icon" src="" alt="Ícone do clima">
+                    <p id="temperature"></p>
+                </div>
+                
+                <p id="description"></p>
+
+                <div class="details-grid">
+                    <div class="detail-box">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <span>Umidade</span>
+                            <p id="humidity"></p>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <span>Vento</span>
+                            <p id="wind"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast-weather">
+                <h3>Previsão para 5 dias</h3>
+                <div id="forecast-grid">
+                    </div>
+            </section>
+
+        </div> </main>
 
     <script src="script.js"></script>
 </body>
